@@ -1,0 +1,30 @@
+{
+  "name": "xss-node",
+  "version": "1.0.0",
+  "description": "Learning XSS &amp; Node",
+  "main": "index.js",
+  "dependencies": {
+    "bleach": "^0.3.0",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "multer": "^1.3.0",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidScales/xss-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidScales/xss-node/issues"
+  },
+  "homepage": "https://github.com/DavidScales/xss-node#readme"
+}
