@@ -2,12 +2,13 @@
 <html>
   <head>
     <link rel="stylesheet" href="/styles.css" />
+    <script type="text/javascript"  src="sanitize-html.js"></script>
 
     <script>
       function chooseTab(num) {
         let html = '<h3>Image ' + parseInt(num) + '</h3><br>';
         html += '<img src="/level3/cloud' + num + '.jpg" />';
-        document.querySelectorAll('.tabContent')[0].innerHTML = html;
+        document.querySelectorAll('.tabContent')[0].innerHTML = sanitizeHtml(html);
 
         window.location.hash = num;
 
