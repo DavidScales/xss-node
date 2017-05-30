@@ -3,7 +3,7 @@ const fs = require('fs');
 const app = express();
 
 // This serves static files from the specified directory
-app.use(express.static('static'));
+app.use(express.static(__dirname + '/static'));
 
 // Disable the reflected XSS filter for demonstration purposes
 app.use(function(req, res, next) {
@@ -15,4 +15,10 @@ app.get(['/', '/index.html'], function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.listen(3000);
+const server = app.listen(8081, function() {
+
+  const host = server.address().address;
+  const port = server.address().port;
+
+  console.log('Example app listening at http://%s:%s', host, port);
+});

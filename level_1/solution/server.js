@@ -23,7 +23,7 @@ const pageFooter = `</div>
 </html>`;
 
 // This serves static files from the specified directory
-app.use(express.static('static'));
+app.use(express.static(__dirname + '/static'));
 
 // Disable the reflected XSS filter for demonstration purposes
 app.use(function(req, res, next) {
